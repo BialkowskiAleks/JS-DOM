@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="city-list"></div>
+
+		<script>
+			const cityList = document.createElement("ul");
+			cityList.classList.add("city-list");
+
+			let cities = [
+				"Warsaw",
+				"Berlin",
+				"Paris",
+				"London",
+				"New York",
+				"Tokio",
+				"Moscow",
+			];
+
+			cities.forEach((city) => {
+				const cityItem = document.createElement("li");
+				cityItem.textContent = city;
+				cityItem.classList.add("city");
+				cityList.appendChild(cityItem);
+			});
+
+			const cityListContainer = document.getElementById("city-list");
+			cityListContainer.appendChild(cityList);
+		</script>
+	</body>
+</html>
