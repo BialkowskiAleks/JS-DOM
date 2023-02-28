@@ -1,4 +1,4 @@
-const cityList = document.createElement("ul");
+const cityList = document.createElement("ol");
 cityList.classList.add("city-list");
 
 let cities = [
@@ -11,7 +11,7 @@ let cities = [
 	"Moscow",
 ];
 
-cities.forEach((city) => {
+cities.forEach(city => {
 	const cityItem = document.createElement("li");
 	cityItem.textContent = city;
 	cityItem.classList.add("city");
